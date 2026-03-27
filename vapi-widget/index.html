@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Deep Economics - Asistente</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0f1e;
+      color: #e0e6f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      color: #4da6ff;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #a0b0c8;
+      line-height: 1.7;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 8px 20px;
+      background: rgba(77, 166, 255, 0.12);
+      border: 1px solid rgba(77, 166, 255, 0.3);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: #4da6ff;
+      letter-spacing: 0.8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>AI Deep Economics</h1>
+    <p>Bienvenido al asistente inteligente. Haz clic en el widget de la esquina inferior derecha para iniciar una conversación de texto o voz.</p>
+    <span class="badge">Powered by Vapi AI</span>
+  </div>
+
+  <!-- Widget de chat de Vapi -->
+  <vapi-widget
+    public-key="b590111c-e36c-48c1-a27b-764851bf7d4a"
+    assistant-id="d83ebd51-e0a3-48ed-a47b-03b9f9afc7f8"
+    mode="chat"
+    theme="dark"
+    position="bottom-right"
+    size="full"
+    radius="large"
+    base-color="#16213e"
+    accent-color="#4da6ff"
+    button-base-color="#4da6ff"
+    button-accent-color="#ffffff"
+    main-label="🗨️ Chat de texto"
+    start-button-text="Iniciar llamada"
+    end-button-text="Finalizar llamada"
+    empty-chat-message="Hola! Soy el asistente de AI Deep Economics. ¿En que puedo ayudarte hoy?"
+    empty-voice-message="Haz clic en el botón para hablar con el asistente"
+    status-label-active="Chat activo"
+    end-chat-button-text="Finalizar chat">
+  </vapi-widget>
+
+  <!-- SDK de Vapi (widget web component) -->
+  <script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"></script>
+
+</body>
+</html>
